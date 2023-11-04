@@ -9,9 +9,18 @@ public class Player : MonoBehaviour
     public float maxSpeed;
     private Rigidbody2D rb;
     public GameObject bulletPrefab;
+
+   // public string Name;
+
+   // public Player(string name, float health)
+   // {
+   //     Name = name;
+   // }
+
     // Start is called before the first frame update
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -34,7 +43,13 @@ public class Player : MonoBehaviour
             velocity = velocity + transform.right * Time.deltaTime * moveSpeed;
             rb.velocity = velocity;
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Instantiate(bulletPrefab, transform.position, transform.rotation);
+        }
     }
 
-   
-}
+
+
+        }
