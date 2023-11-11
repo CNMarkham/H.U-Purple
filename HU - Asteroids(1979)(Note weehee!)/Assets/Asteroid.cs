@@ -24,10 +24,18 @@ public class Asteroid : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    private void OnTriggerEnter(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(collision.gameObject);
 
-        Destroy(gameObject);
+        if (transform.localScale.x > minSize)
+        {
+            transform.localScale = transform.localScale * 0.5f;
+            Instantiate(gameObject, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 364039619315759131}
   - component: {fileID: 502359656055390757}
   - component: {fileID: 7527685523434186688}
+  - component: {fileID: 4890092794237776225}
+  - component: {fileID: -7351841259156385285}
   m_Layer: 6
   m_Name: EmotionalBullet
   m_TagString: Untagged
@@ -101,3 +103,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &4890092794237776225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751871099585702450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4a03abc61f5704a802ac47c048d36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &-7351841259156385285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751871099585702450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a17394441a7ab4f86831fee4a68f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

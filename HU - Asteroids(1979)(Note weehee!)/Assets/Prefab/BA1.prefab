@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 1623085974043471576}
   - component: {fileID: 7252855737001426447}
   - component: {fileID: 3444469334830807681}
-  m_Layer: 0
+  - component: {fileID: 5119129766858857552}
+  - component: {fileID: -6318142249901542134}
+  m_Layer: 7
   m_Name: BA1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,3 +125,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.25
+--- !u!114 &5119129766858857552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548700223932220861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2bee0d770e480b428de1c5f771ac5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  minSize: 0.25
+--- !u!114 &-6318142249901542134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548700223932220861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a17394441a7ab4f86831fee4a68f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
