@@ -41,10 +41,15 @@ public class Player : MonoBehaviour
         {
             Vector3 velocity = rb.velocity;
             velocity = velocity + transform.right * Time.deltaTime * moveSpeed;
+            if (velocity.x > 10)
+            {
+                velocity.x = 10;
+            }
+            Vector3.ClampMagnitude(velocity, maxSpeed);
             rb.velocity = velocity;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPrefab, transform.position, transform.rotation);
         }
