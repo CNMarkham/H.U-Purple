@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhostMove
+  m_Name: CustomGhostMove
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,12 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+      value: {fileID: 21300000, guid: c882ae9556fdfa046bf37b4d35a07e1f, type: 3}
+    - time: 0.016666668
       value: {fileID: 21300000, guid: 57173548a6237c74db046b43b04b97a1, type: 3}
-    - time: 0.16666667
-      value: {fileID: 21300000, guid: 7df53c39c3536554c8628b6349101ff1, type: 3}
-    - time: 0.33333334
+    - time: 0.033333335
+      value: {fileID: 21300000, guid: c882ae9556fdfa046bf37b4d35a07e1f, type: 3}
+    - time: 0.05
       value: {fileID: 21300000, guid: 57173548a6237c74db046b43b04b97a1, type: 3}
     attribute: m_Sprite
     path: 
@@ -44,15 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
+    - {fileID: 21300000, guid: c882ae9556fdfa046bf37b4d35a07e1f, type: 3}
     - {fileID: 21300000, guid: 57173548a6237c74db046b43b04b97a1, type: 3}
-    - {fileID: 21300000, guid: 7df53c39c3536554c8628b6349101ff1, type: 3}
+    - {fileID: 21300000, guid: c882ae9556fdfa046bf37b4d35a07e1f, type: 3}
     - {fileID: 21300000, guid: 57173548a6237c74db046b43b04b97a1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 0.06666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
