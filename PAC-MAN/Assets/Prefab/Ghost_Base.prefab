@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 8395222365978932905}
   - component: {fileID: 8395222365978932906}
   - component: {fileID: 8395222365978932907}
+  - component: {fileID: 7256918749419643156}
   m_Layer: 6
   m_Name: Ghost_Base
   m_TagString: Ghost
@@ -431,3 +432,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7256918749419643156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395222365978932908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0388f1b63992c1b49ac9c200b9c3ab96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
