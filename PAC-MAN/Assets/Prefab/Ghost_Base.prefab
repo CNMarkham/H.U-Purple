@@ -444,3 +444,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0388f1b63992c1b49ac9c200b9c3ab96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  body: {fileID: 3810445077261140712}
+  eyes: {fileID: 5473140037992578862}
+  blue: {fileID: 6525532574773894765}
+  white: {fileID: 7720197297009046163}
+  atHome: 0
+  homeDuration: 0

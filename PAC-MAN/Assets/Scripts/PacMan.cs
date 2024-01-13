@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PacMan : Movement
-{
+public class PacMan : Movement { 
+
     protected override void ChildUpdate()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -12,9 +12,6 @@ public class PacMan : Movement
         if (horizontal != 0 || vertical != 0)
         {
             SetDirection(new Vector2(horizontal, vertical));
-            {
-                SetDirection(new Vector2(horizontal, vertical));
-            }
             transform.right = direction;
         }
     }

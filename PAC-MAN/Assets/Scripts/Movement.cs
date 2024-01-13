@@ -18,7 +18,7 @@ public abstract class Movement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         direction = initialDirection;
-        direction = nextDirection;
+        nextDirection = Vector2.zero;
     }
 
     // Update is called once per frame
