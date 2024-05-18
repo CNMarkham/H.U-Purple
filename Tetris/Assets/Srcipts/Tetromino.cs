@@ -12,13 +12,15 @@ public class Tetromino : MonoBehaviour
     public Vector3 rotationPoint;
     public static Transform[,] grid = new Transform[width, height];
 
+
+
     public void AddToGrid()
     {
         foreach (Transform child in transform)
         {
             int x = Mathf.RoundToInt(child.transform.position.x);
             int y = Mathf.RoundToInt(child.transform.position.y);
-            Debug.Log("Show " + x + " " +  y);
+            Debug.Log("Show " + x + " " + y);
             grid[x, y] = child;
         }
     }
@@ -26,23 +28,17 @@ public class Tetromino : MonoBehaviour
 
     public void Start()
     {
-        
+
         //tempTime = fallTime;
     }
     public bool ValidMove()
-
     {
         foreach (Transform child in transform)
         {
-          
+
             int x = Mathf.RoundToInt(child.transform.position.x);
             int y = Mathf.RoundToInt(child.transform.position.y);
 
-
-            if (grid[x, y] != null)
-            {
-                return false;
-            }
 
             if (x >= width || y >= height)
             {
@@ -53,15 +49,20 @@ public class Tetromino : MonoBehaviour
                 return false;
             }
 
+            if (grid[x, y] != null)
+            {
+                return false;
+            }
+
         }
         return true;
 
 
-        
-    }
-    
 
-    
+    }
+
+
+
 
 
     // Update is called once per frame
@@ -86,11 +87,12 @@ public class Tetromino : MonoBehaviour
                 transform.position = transform.position + Vector3.right;
             }
         }
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.position = transform.position + Vector3.right;
             if (!ValidMove())
             {
+                Debug.Log("Show " + transform.position.x + " " + transform.position.y);
                 transform.position = transform.position + Vector3.left;
             }
         }
@@ -107,7 +109,7 @@ public class Tetromino : MonoBehaviour
 
         if (Time.time - previousTime > tempTime)
         {
-            
+
             transform.position = transform.position + Vector3.down;
             previousTime = Time.time;
 
@@ -119,15 +121,64 @@ public class Tetromino : MonoBehaviour
                 this.enabled = false;
                 AddToGrid();
                 FindObjectOfType<Spawner>().SpawnTetromino();
-
+                CheckLines();
             }
 
 
         }
- 
 
 
 
 
+
+    }
+
+    public void CheckLines()
+    {
+        for (int i = height - 1; i >= 0; i--)
+        {
+            if (HasLine(i))
+            {
+                DeleteLine(i);
+                RowDown(i);
+            }
+        }
+    }
+
+    public bool HasLine(int i) 
+    {
+        for (int j=0; j < width; j++)
+        {
+            if (grid[j,i] == null)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void DeleteLine(int i)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            Destroy(grid[j, i].gameObject);
+            grid[j, i] = null;
+        }
+    }
+
+    public void RowDown(int i)
+    {
+     for (int y = i; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                if (grid[x, y] != null)
+                {
+                    grid[x, y - 1] = grid[x, y];
+                    grid[x, y] = null;
+                    grid[x, y - 1].transform.position += Vector3.down;
+                }
+            }
+        }
     }
 }
